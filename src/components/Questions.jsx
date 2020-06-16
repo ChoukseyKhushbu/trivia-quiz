@@ -40,7 +40,7 @@ class Questions extends Component {
             response_code: response_code,
         })
 
-        console.log(response);
+        // console.log(response);
     }
 
     nextQuestion = () => {
