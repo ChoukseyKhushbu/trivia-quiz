@@ -5,10 +5,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./unsplash.jpg);
 }
-.heading{
-  font-size: 4rem;
-  margin-bottom: .1em;
-}
 .container{
   height: 100vh;
   display: flex;
@@ -33,40 +29,12 @@ body {
 }
 .quiz{
   width:60%;
-  
+  // padding: 10 50px;
 }
-.button{
-  margin-top: 10px;
-  background-color: rgba(0,0,0,0.75);
-  width: fit-content;
-  color: white;
-  padding: .5rem 1rem;
-  border: 1px solid rgba(0,0,0,0.75);
-  border-radius: 10px;
-  font-size: 1.4rem;
-  cursor: pointer;
-  transition: background-color 250ms;
-  float: right;
-    &:hover{
-      background-color: rgba(0,0,0,0.85);
-    }
-}
-ul{
-  padding-inline-start: 0px;
-  margin-block-start: 0px;
-}
-li{
-  list-style-type: none;
-  height: 2em;
-  // width: 50%;
-  border-radius: 5px;
-  padding: 10px 20px 0 10px;
-  background-color: transparentize($color: #636F88, $amount: 0.6);
-  margin-bottom:10px;
-  &:hover{
-    cursor: pointer;
-    background-color:#636F88;
-  }
+
+.heading{
+  font-size: 4rem;
+  margin-bottom: .1em;
 }
 
 .dropdown{
@@ -75,27 +43,71 @@ li{
   background-color: white;
   font-family: inherit;
   font-size: inherit;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   margin-left: 10px;
 }
 
-.correct{
-  background-color: transparentize($color: #308051, $amount: 0.6);
+ul{
+  padding-inline-start: 0px;
+  margin-block-start: 0px;
 }
-.wrong{
-  background-color: transparentize($color: #7e1b1b, $amount: 0.6);
+li{
+  list-style-type: none;
+  width: 100%;
+  padding: 10px 20px 10px 10px;
 }
-i{
+
+.button{
+  margin-top: 10px;
+  background-color: rgba(0,0,0,0.75);
+  width: fit-content;
+  color: white;
+  padding: .5rem 1rem;
+  border: 1px solid rgba(0,0,0,0.75);
+  border-radius: 5px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 250ms;
   float: right;
+    &:hover{
+      background-color: rgba(0,0,0,0.85);
+    }
+}
+
+i{
+  position: relative;  
+  right: 10px;
+  top: 10px;
 }
 a{
   text-decoration: none;
   color: white;
 }
-.difficulty{
-  width: 10rem;
+.category{
+  min-width: 20rem;
 }
 label{
   font-weight: 500;
   font-size: 20px;
+}
+.footer{
+  padding: 10px;
+}
+.option{
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  // padding: 10px 20px 10px 10px;
+  background-color: transparentize($color: #636F88, $amount: 0.6);
+  margin-bottom:10px;
+  &.correct{
+    background-color: transparentize($color: #308051, $amount: 0.6);
+  }
+  &.wrong{
+    background-color: transparentize($color: #7e1b1b, $amount: 0.6);
+  }
+  &.hoverEffectEnable:hover{
+    cursor: pointer;
+    background-color:transparentize($color: #636F88, $amount: 0.4);
+  }
 }

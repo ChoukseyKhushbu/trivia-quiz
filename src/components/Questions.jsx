@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
 import { shuffle } from 'underscore';
 import axios from 'axios';
-import '../question.css';
-// import classNames from 'classnames';
+import classNames from 'classnames';
 
 class Questions extends Component {
     constructor(props) {
@@ -22,12 +21,8 @@ class Questions extends Component {
     }
 
     getQuestions = async () => {
-        let response;
-        if (this.props.difficulty) {
-            response = await axios.get(`https://opentdb.com/api.php?amount=10&category=${this.props.match.params.categoryID}&difficulty=${this.props.difficulty}`);
-        } else {
-            response = await axios.get(`https://opentdb.com/api.php?amount=10&category=${this.props.match.params.categoryID}`);
-        }
+        const response = await axios.get(`https://opentdb.com/api.php?amount=10&category=${this.props.match.params.categoryID}&difficulty=${this.props.difficulty || ''}`);
+
         let { results, response_code } = response.data;
         results = results.map((question) => {
             const optionList = shuffle([...question.incorrect_answers, question.correct_answer]);
@@ -53,8 +48,6 @@ class Questions extends Component {
     checkAnswer = (event) => {
         const { questions, number } = this.state;
         const ind = event.target.value;
-        // console.log(questions[number].optionList[ind]);
-
         const answer = questions[number].optionList[ind];
         this.setState({
             answer: answer,
@@ -69,28 +62,30 @@ class Questions extends Component {
 
     render() {
 
-        // console.log(this.props);
         const { response_code, loading, questions, number, answer } = this.state;
-        // let resultClass = classNames({
-        //     // "correct": this.state.answer === this.state.questions[this.state.number].correct_answer,
-        //     // "wrong": this.state.answer !== this.state.questions[this.state.number].correct_answer
-        // });
 
         return (loading ? (<h1>loading...</h1>) : response_code === 0 ?
 
             <div className="quiz">
-                <h1>{questions[number].question}</h1>
+                <h1 dangerouslySetInnerHTML={{ __html: `${questions[number].question}` }}></h1>
 
                 <ul>
                     {questions[number].optionList.map((option, index) =>
-                        <li key={index} onClick={answer === null ? this.checkAnswer : undefined} className={answer && (questions[number].correct_answer === option ? 'correct' : option === answer ? 'wrong' : '')} value={index}>
-                            {option}
+                        <div key={index} className={classNames(
+                            "option",
+                            {
+                                "hoverEffectEnable": answer === null,
+                                "hoverEffectDisable": answer !== null,
+                                "correct": answer && questions[number].correct_answer === option,
+                                "wrong": answer && option === answer && questions[number].correct_answer !== option
+                            })}>
+                            <li onClick={answer === null ? this.checkAnswer : undefined}
+                                value={index} dangerouslySetInnerHTML={{ __html: `${option} ` }}>
+                            </li>
                             {answer && (questions[number].correct_answer === option) ? <i className="fas fa-check-circle"></i> : option === answer ? <i className="fas fa-times-circle"></i> : ''}
-                        </li>
+                        </div>
                     )}
                 </ul>
-
-                {/* {answer && <div className="answer">{answer === questions[number].correct_answer ? 'Correct!' : 'Incorrect!'}</div>} */}
 
                 {number < questions.length - 1 ? <button className="button" onClick={this.nextQuestion}>Next Question</button> : <button className="button" onClick={this.showResults}>Results</button>}
 

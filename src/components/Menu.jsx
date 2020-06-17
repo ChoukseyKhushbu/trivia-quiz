@@ -43,7 +43,7 @@ class Menu extends React.Component {
         return <div className="menu">
             <div>
                 <label htmlFor="category">Category</label>
-                <select name="category" className="dropdown" value={this.state.selectedCategory} onChange={this.selectCategory}>
+                <select name="category" className="dropdown category" value={this.state.selectedCategory} onChange={this.selectCategory}>
                     {this.state.categories.length && this.state.categories.map(element => {
                         return <option value={element.id} key={element.id}>{element.name}</option>
                     })}
@@ -51,7 +51,7 @@ class Menu extends React.Component {
             </div>
             <div>
                 <label htmlFor="difficulty">Difficulty</label>
-                <select name="difficulty" className="dropdown" onChange={this.props.changeDifficulty}>
+                <select name="difficulty" className="dropdown difficulty" onChange={this.props.changeDifficulty}>
                     <option value="">All</option>
                     <option value="easy">Easy</option>
                     <option value="medium">Medium</option>
