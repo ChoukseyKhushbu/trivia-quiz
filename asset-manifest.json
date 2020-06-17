@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/trivia-quiz/static/css/main.e6d0b8f4.chunk.css",
-    "main.js": "/trivia-quiz/static/js/main.e1d6e4b0.chunk.js",
-    "main.js.map": "/trivia-quiz/static/js/main.e1d6e4b0.chunk.js.map",
+    "main.css": "/trivia-quiz/static/css/main.fbd62139.chunk.css",
+    "main.js": "/trivia-quiz/static/js/main.07d72e6e.chunk.js",
+    "main.js.map": "/trivia-quiz/static/js/main.07d72e6e.chunk.js.map",
     "runtime-main.js": "/trivia-quiz/static/js/runtime-main.fa0a8b03.js",
     "runtime-main.js.map": "/trivia-quiz/static/js/runtime-main.fa0a8b03.js.map",
-    "static/js/2.820fb999.chunk.js": "/trivia-quiz/static/js/2.820fb999.chunk.js",
-    "static/js/2.820fb999.chunk.js.map": "/trivia-quiz/static/js/2.820fb999.chunk.js.map",
+    "static/js/2.bf7e940e.chunk.js": "/trivia-quiz/static/js/2.bf7e940e.chunk.js",
+    "static/js/2.bf7e940e.chunk.js.map": "/trivia-quiz/static/js/2.bf7e940e.chunk.js.map",
     "index.html": "/trivia-quiz/index.html",
-    "precache-manifest.2d40199fdabeca4bd722574318722b03.js": "/trivia-quiz/precache-manifest.2d40199fdabeca4bd722574318722b03.js",
+    "precache-manifest.4b4b9203508f72e954f51a7352ac7408.js": "/trivia-quiz/precache-manifest.4b4b9203508f72e954f51a7352ac7408.js",
     "service-worker.js": "/trivia-quiz/service-worker.js",
-    "static/css/main.e6d0b8f4.chunk.css.map": "/trivia-quiz/static/css/main.e6d0b8f4.chunk.css.map",
-    "static/js/2.820fb999.chunk.js.LICENSE.txt": "/trivia-quiz/static/js/2.820fb999.chunk.js.LICENSE.txt",
+    "static/css/main.fbd62139.chunk.css.map": "/trivia-quiz/static/css/main.fbd62139.chunk.css.map",
+    "static/js/2.bf7e940e.chunk.js.LICENSE.txt": "/trivia-quiz/static/js/2.bf7e940e.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/trivia-quiz/static/media/unsplash.953d3d3e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.fa0a8b03.js",
-    "static/js/2.820fb999.chunk.js",
-    "static/css/main.e6d0b8f4.chunk.css",
-    "static/js/main.e1d6e4b0.chunk.js"
+    "static/js/2.bf7e940e.chunk.js",
+    "static/css/main.fbd62139.chunk.css",
+    "static/js/main.07d72e6e.chunk.js"
   ]
 }
