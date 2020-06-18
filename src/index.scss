@@ -1,11 +1,12 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto','Ubuntu',sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./unsplash.jpg);
 }
-.container{
+.container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,101 +14,101 @@ body {
   justify-content: space-between;
 }
 
-.top{
+.top {
   text-align: center;
 }
 
-.result{
-  text-align: center; 
+.result {
+  text-align: center;
 }
-.menu{
+.menu {
   // margin-top: 200px;
   display: flex;
   flex-direction: column;
   // align-items: center;
   // flex: 1;
 }
-.quiz{
-  width:60%;
+.quiz {
+  width: 60%;
   // padding: 10 50px;
 }
 
-.heading{
+.heading {
   font-size: 4rem;
-  margin-bottom: .1em;
+  margin-bottom: 0.1em;
 }
 
-.dropdown{
-  height: 2rem;
-  border-radius: 5px;
-  background-color: white;
-  font-family: inherit;
-  font-size: inherit;
-  margin-bottom: 15px;
-  margin-left: 10px;
+.dropdown {
+  min-width: 15rem;
 }
 
-ul{
+.select-option {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
   padding-inline-start: 0px;
   margin-block-start: 0px;
 }
-li{
+li {
   list-style-type: none;
   width: 100%;
   padding: 10px 20px 10px 10px;
 }
 
-.button{
+.button {
   margin-top: 10px;
-  background-color: rgba(0,0,0,0.75);
+  background-color: rgba(0, 0, 0, 0.75);
   width: fit-content;
   color: white;
-  padding: .5rem 1rem;
-  border: 1px solid rgba(0,0,0,0.75);
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.75);
   border-radius: 5px;
   font-size: 1.4rem;
   cursor: pointer;
   transition: background-color 250ms;
   float: right;
-    &:hover{
-      background-color: rgba(0,0,0,0.85);
-    }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
-i{
-  position: relative;  
+i {
+  position: relative;
   right: 10px;
   top: 10px;
 }
-a{
-  text-decoration: none;
-  color: white;
-}
-.category{
-  min-width: 20rem;
-}
-label{
+
+label {
   font-weight: 500;
   font-size: 20px;
+  margin-right: 15px;
 }
-.footer{
+.footer {
   padding: 10px;
 }
-.option{
+.option {
   display: flex;
   flex-direction: row;
   border-radius: 5px;
   // padding: 10px 20px 10px 10px;
-  background-color: transparentize($color: #636F88, $amount: 0.6);
-  margin-bottom:10px;
-  &.correct{
+  background-color: transparentize($color: #636f88, $amount: 0.6);
+  margin-bottom: 10px;
+  &.correct {
     background-color: transparentize($color: #308051, $amount: 0.6);
   }
-  &.wrong{
+  &.wrong {
     background-color: transparentize($color: #7e1b1b, $amount: 0.6);
   }
-  &.hoverEffectEnable:hover{
+  &.hoverEffectEnable:hover {
     cursor: pointer;
-    background-color:transparentize($color: #636F88, $amount: 0.4);
+    background-color: transparentize($color: #636f88, $amount: 0.4);
   }
 }
