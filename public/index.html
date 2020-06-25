@@ -31,7 +31,7 @@
     <title>React App</title>
   </head>
 
-  <body>
+  <body class="asyncImage" data-src="/trivia-quiz/unsplash.jpg">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <a
@@ -45,15 +45,28 @@
         alt="Fork me on GitHub"
         data-recalc-dims="1"
     /></a>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
+  <script>
+    (() => {
+      // Page is loaded
+      console.log("here");
+      const objects = document.getElementsByClassName("asyncImage");
+      Array.from(objects).map((item) => {
+        // Start loading image
+        const img = new Image();
+        console.log("item: ", item);
+
+        img.src = item.dataset.src;
+        // Once image is loaded replace the src of the HTML element
+        console.log("img.src: ", img.src);
+        img.onload = () => {
+          item.classList.remove("asyncImage");
+
+          return item.nodeName === "IMG"
+            ? (item.src = item.dataset.src)
+            : (item.style.backgroundImage = `url(${item.dataset.src})`);
+        };
+      });
+    })();
+  </script>
 </html>
