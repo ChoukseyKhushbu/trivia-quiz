@@ -113,3 +113,18 @@ label {
     background-color: transparentize($color: #636f88, $amount: 0.4);
   }
 }
+
+@media only screen and (max-width: 425px) {
+  .top {
+    padding-top: 4rem;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+  .dropdown {
+    min-width: 10rem;
+  }
+  .menu {
+    padding: 0 10px;
+  }
+}
