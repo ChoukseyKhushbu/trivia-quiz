@@ -17,6 +17,7 @@ class Questions extends Component {
   }
 
   componentDidMount() {
+    // console.log(this.props.numOfQues); previous state's numofques is logged instead of the new state ,because of race condition.
     this.getQuestions();
   }
 

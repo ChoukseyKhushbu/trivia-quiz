@@ -46,19 +46,17 @@
         data-recalc-dims="1"
     /></a>
   </body>
+  <!-- TODO: migrate the script code to react components. -->
   <script>
     (() => {
       // Page is loaded
-      console.log("here");
       const objects = document.getElementsByClassName("asyncImage");
       Array.from(objects).map((item) => {
         // Start loading image
         const img = new Image();
-        console.log("item: ", item);
 
         img.src = item.dataset.src;
         // Once image is loaded replace the src of the HTML element
-        console.log("img.src: ", img.src);
         img.onload = () => {
           item.classList.remove("asyncImage");
 

@@ -74,17 +74,17 @@ class Menu extends React.Component {
     if (action.name === "difficulty") {
       this.props.changeDifficulty(option.value);
       let newMax = categoryQuestions[option.value || "all"];
-      console.log(newMax);
       if (newMax < numOfQues) this.props.setnumOfQues(newMax);
     } else {
       this.props.setnumOfQues(option.value);
     }
   };
+  // TODO: Make the InputChange of creatable select controlled
   handleInputChange = (inputValue, actionMeta) => {
-    console.group("Input Changed");
-    console.log(inputValue);
-    console.log(`action: ${actionMeta.action}`);
-    console.groupEnd();
+    // console.group("Input Changed");
+    // console.log(inputValue);
+    // console.log(`action: ${actionMeta.action}`);
+    // console.groupEnd();
   };
   render() {
     const { difficulty, numOfQues } = this.props;
