@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a741e186f934023ecbfc1bea7d2e2a95",
+    "revision": "6b5d9809be63903d447a88056328d2ac",
     "url": "/trivia-quiz/index.html"
   },
   {
-    "revision": "94c3c01baf57c0a7b5b8",
-    "url": "/trivia-quiz/static/css/main.49248e0a.chunk.css"
+    "revision": "5ff2b7c99c4959ec3e3d",
+    "url": "/trivia-quiz/static/css/main.8c726f10.chunk.css"
   },
   {
     "revision": "48786d7dea5a3596a15a",
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/trivia-quiz/static/js/2.793ddd2f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "94c3c01baf57c0a7b5b8",
-    "url": "/trivia-quiz/static/js/main.4763fb21.chunk.js"
+    "revision": "5ff2b7c99c4959ec3e3d",
+    "url": "/trivia-quiz/static/js/main.a2d96f4d.chunk.js"
   },
   {
     "revision": "5d12c1007cdf69cd52d1",
     "url": "/trivia-quiz/static/js/runtime-main.fa0a8b03.js"
   },
   {
-    "revision": "953d3d3e235a3ebfb9ae128789a0ab48",
-    "url": "/trivia-quiz/static/media/unsplash.953d3d3e.jpg"
+    "revision": "4c6583d26bea5ba2819a6f2f5eae98c7",
+    "url": "/trivia-quiz/static/media/unsplash.4c6583d2.svg"
   }
 ]);
